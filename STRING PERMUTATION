@@ -1,0 +1,17 @@
+from itertools import permutations
+S=list(map(str,input().split()))
+s=S[0]
+n=int(S[1])
+p=permutations(s,n)
+L=[]
+for i in p:
+    L.append(i)
+L.sort()
+for i in L:
+    sub=""
+    for j in range(n):
+       sub+=i[j]
+    print(sub) 
+        
+    
+      
