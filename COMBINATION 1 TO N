@@ -1,0 +1,16 @@
+from itertools import combinations
+L=list(map(str,input().split()))
+s=[]
+n=int(L[1])
+for i in L[0]:
+    s.append(i)
+s.sort()
+
+
+for i in range(n):
+    C=combinations(s,i+1)
+    for j in C:
+        sub=""
+        for k in range(i+1):
+            sub+=j[k]
+        print(sub)
